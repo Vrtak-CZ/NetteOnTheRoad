@@ -7,7 +7,8 @@
  * @package    MyApplication
  */
 
-
+use Nette\Application\AppForm,
+	Nette\Forms\Form;
 
 /**
  * Homepage presenter.

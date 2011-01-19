@@ -29,8 +29,19 @@
 </head>
 
 <body>
+<div id="wrapper">
+	<div id="logo"></div>
+
+	{block title}
+	<h1>Nette on the Road - Hradec Králové</h1>
+	<h2>{ifset $title}{$title}{else}DEMO{/ifset}</h2>
+	{/block}
+	
+	<hr>
+	
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
 	{include #content}
+</div>
 </body>
 </html>
