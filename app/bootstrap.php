@@ -43,6 +43,8 @@ $router = $application->getRouter();
 
 $router[] = new Route('index.php', 'Homepage:default', Route::ONE_WAY);
 
+$router[] = new Route('student/<student>', 'Homepage:detail');
+
 $router[] = new Route('<presenter>/<action>[/<id>]', 'Homepage:default');
 
 

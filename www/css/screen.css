@@ -123,3 +123,19 @@ a:hover, a:active, a:focus {
 	list-style: none;
 	color: gray;
 }
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li hr {
+	border: 2px solid #E4DED5;
+	visibility: visible;
+	height: 0;
+}
+
+#footer {
+	font-size: 0.8em;
+	text-align: center;
+}

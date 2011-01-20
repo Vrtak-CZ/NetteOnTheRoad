@@ -25,6 +25,13 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="{$basePath}/js/netteForms.js"></script>
+	<script src="{$basePath}/js/jquery-1.4.4.min.js"></script>
+	<script src="{$basePath}/js/jquery.nette.js"></script>
+	<script>$("a.ajax").live("click", function (event) {
+		event.preventDefault();
+		$.get(this.href);
+	});
+	</script>
 	{block head}{/block}
 </head>
 
@@ -42,6 +49,12 @@
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
 	{include #content}
+	
+	<div id="footer">
+		&copy; 2011 - <a href="http://patrik.votocek.cz" target="_blank">Patrik Votoček</a>
+		 - <a href="http://aceit.cz" target="_blank">Ace IT s.r.o.</a>
+		 - <a href="http://nette.org" target="_blank">Nette Framework</a>
+	</div>
 </div>
 </body>
 </html>
